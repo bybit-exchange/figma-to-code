@@ -1,0 +1,41 @@
+README.md
+  s_e6b091a1807307::t_8d533621a2d905 1-347
+README.zh-CN.md
+  s_e6b091a1807307::t_c28c880be8e868 1-347
+assets/en/arch-overview.svg
+  s_e6b091a1807307::t_2ca6efca7075b0 1-133
+assets/en/code-connect-flow.svg
+  s_e6b091a1807307::t_298255c3e8ad7e 1-79
+assets/en/dual-platform.svg
+  s_e6b091a1807307::t_0cfe4859880ff5 1-91
+assets/en/ir-contract.svg
+  s_e6b091a1807307::t_31d28886f77c01 1-101
+assets/en/validation-layers.svg
+  s_e6b091a1807307::t_16959a3a678213 1-85
+assets/zh/arch-overview.svg
+  s_e6b091a1807307::t_863e55f265c57f 1-133
+assets/zh/code-connect-flow.svg
+  s_e6b091a1807307::t_5f7fdc5e8d00a4 1-79
+assets/zh/dual-platform.svg
+  s_e6b091a1807307::t_faeb9c543152a9 1-91
+assets/zh/ir-contract.svg
+  s_e6b091a1807307::t_60292863e729f9 1-101
+assets/zh/validation-layers.svg
+  s_e6b091a1807307::t_bbcda30d753a79 1-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.1+5a7225d",
+  "base_commit_sha": "dce4556110f4438ffc85dcde234b6dc032fd1641",
+  "prompts": {},
+  "sessions": {
+    "s_e6b091a1807307": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5b0fde53-bc6a-466c-8eec-8266d013b6e0",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    }
+  }
+}

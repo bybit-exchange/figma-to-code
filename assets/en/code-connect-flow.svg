@@ -1,0 +1,79 @@
+<svg viewBox="0 0 620 460" width="620" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>text { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',system-ui,sans-serif; }</style>
+  <marker id="aw" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/></marker>
+  <marker id="ag" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/></marker>
+  <marker id="ar" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/></marker>
+</defs>
+
+<!-- Title -->
+<text x="310" y="26" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="600">Code Connect Component Matching Flow</text>
+
+<!-- Step 1: INSTANCE 节点 x=185, y=42, w=250, h=36, cx=310 -->
+<rect x="185" y="42" width="250" height="36" rx="8" stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe"/>
+<text x="310" y="64" font-size="12" fill="#1e40af" text-anchor="middle" font-weight="600">IR Node: isComponentInstance = true</text>
+
+<!-- Arrow down: 78 → 88+5=93, end=120-11=109 -->
+<path d="M310,83 L 310,102" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Step 2: Code Connect 查询 y=106, h=36, cx=310 -->
+<rect x="185" y="106" width="250" height="36" rx="8" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff"/>
+<text x="310" y="128" font-size="12" fill="#6b21a8" text-anchor="middle">Query Code Connect Map</text>
+
+<!-- Diamond decision y=170 -->
+<!-- Diamond: cx=310, cy=185, half-w=90, half-h=30 -->
+<!-- Path: top(310,155) right(400,185) bottom(310,215) left(220,185) -->
+<polygon points="310,158 400,188 310,218 220,188" stroke="#64748b" stroke-width="1.5" fill="#f8fafc"/>
+<text x="310" y="192" font-size="11" fill="#1e293b" text-anchor="middle">Match?</text>
+
+<!-- Arrow down from CC query to diamond: 142→158-11=147 -->
+<path d="M310,147 L 310,152" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- YES branch: right side of diamond → to right -->
+<!-- Diamond right vertex: (400,188). Arrow to: x=460-11=449 -->
+<path d="M400,188 L 449,188" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ag)"/>
+<text x="423" y="182" font-size="10" fill="#166534" text-anchor="middle">Match</text>
+
+<!-- YES result box: x=453, y=170, w=152, h=36, cx=529 -->
+<rect x="453" y="170" width="152" height="36" rx="6" stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
+<text x="529" y="185" font-size="10" fill="#166534" text-anchor="middle">Use Library Component Directly</text>
+<text x="529" y="199" font-size="10" fill="#166534" text-anchor="middle">&lt;Button variant="primary"&gt;</text>
+
+<!-- NO branch: bottom of diamond → down -->
+<!-- Diamond bottom vertex: (310,218). Arrow to y=248-11=237 -->
+<path d="M310,218 L 310,237" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="320" y="232" font-size="10" fill="#b45309">No Match</text>
+
+<!-- Step 3: search_components y=241, h=36 -->
+<rect x="185" y="241" width="250" height="36" rx="8" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+<text x="310" y="263" font-size="12" fill="#b45309" text-anchor="middle">search_components Lookup</text>
+
+<!-- Arrow down: 277→300-11=289 -->
+<path d="M310,282 L 310,293" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Diamond 2: cx=310, cy=318 -->
+<polygon points="310,300 400,328 310,356 220,328" stroke="#64748b" stroke-width="1.5" fill="#f8fafc"/>
+<text x="310" y="332" font-size="11" fill="#1e293b" text-anchor="middle">Found?</text>
+
+<!-- YES2 right branch -->
+<path d="M400,328 L 449,328" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ag)"/>
+<text x="423" y="322" font-size="10" fill="#166534" text-anchor="middle">Found</text>
+
+<!-- YES2 result: x=453, y=310, w=152, h=36 -->
+<rect x="453" y="310" width="152" height="36" rx="6" stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
+<text x="529" y="325" font-size="10" fill="#166534" text-anchor="middle">After User Confirm</text>
+<text x="529" y="340" font-size="10" fill="#166534" text-anchor="middle">Use Matched Component</text>
+
+<!-- NO2 bottom branch: (310,356) → 380-11=369 -->
+<path d="M310,356 L 310,369" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+<text x="320" y="367" font-size="10" fill="#64748b">Not Found</text>
+
+<!-- Fallback box: y=373, h=54 double, cx=310 -->
+<rect x="185" y="373" width="250" height="54" rx="8" stroke="#94a3b8" stroke-width="1.5" fill="#f1f5f9"/>
+<text x="310" y="394" font-size="12" fill="#475569" text-anchor="middle">fallback: handwrite &lt;div&gt;</text>
+<text x="310" y="412" font-size="10" fill="#64748b" text-anchor="middle">CSS fallback, preserve structure</text>
+
+<!-- Note at bottom -->
+<text x="310" y="448" font-size="10" fill="#64748b" text-anchor="middle">Code Connect hits at confidence=1.0 are auto-replaced without confirmation</text>
+
+</svg>

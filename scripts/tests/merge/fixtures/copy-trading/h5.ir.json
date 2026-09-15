@@ -1,0 +1,54 @@
+{
+  "figmaId": "8607:14117",
+  "figmaName": "Page/CopyTrading-Competition-Mobile",
+  "figmaType": "FRAME",
+  "css": {"width": "393px"},
+  "absoluteBoundingBox": {"x": 0, "y": 0, "width": 393, "height": 3000},
+  "children": [
+    {
+      "figmaId": "8607:14120",
+      "figmaName": "Section/Hero-Banner",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex", "flexDirection": "column", "height": "400px"},
+      "absoluteBoundingBox": {"x": 0, "y": 0, "width": 393, "height": 400},
+      "visible": true,
+      "children": [
+        {"figmaId": "8607:14121", "figmaName": "title", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Copy Trading Arena",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "hero-banner", "htmlTag": "section", "componentName": null, "props": []}
+    },
+    {
+      "figmaId": "8607:14130",
+      "figmaName": "Section/Main-Content",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex", "flexDirection": "column"},
+      "absoluteBoundingBox": {"x": 0, "y": 400, "width": 393, "height": 2000},
+      "visible": true,
+      "children": [
+        {"figmaId": "8607:14131", "figmaName": "desc", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Compete and win rewards",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "main-content", "htmlTag": "section", "componentName": null, "props": []}
+    },
+    {
+      "figmaId": "8607:14140",
+      "figmaName": "Section/Footer",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex"},
+      "absoluteBoundingBox": {"x": 0, "y": 2400, "width": 393, "height": 200},
+      "visible": true,
+      "children": [
+        {"figmaId": "8607:14141", "figmaName": "footer-text", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Terms and Conditions",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "footer", "htmlTag": "footer", "componentName": null, "props": []}
+    }
+  ]
+}

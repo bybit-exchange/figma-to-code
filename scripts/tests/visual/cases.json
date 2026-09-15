@@ -1,0 +1,11 @@
+{
+  "_comment": "Add your own Figma design file URLs here to run visual regression tests.",
+  "cases": [
+    {
+      "_example": true,
+      "name": "MyPage",
+      "url": "https://www.figma.com/design/<file-key>/My-Design?node-id=<node-id>&m=dev",
+      "viewport": 1440
+    }
+  ]
+}

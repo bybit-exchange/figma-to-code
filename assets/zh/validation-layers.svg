@@ -1,0 +1,85 @@
+<svg viewBox="0 0 680 420" width="680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>text { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',system-ui,sans-serif; }</style>
+  <marker id="aw" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/></marker>
+  <marker id="ag" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/></marker>
+  <marker id="ar" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ef4444"/></marker>
+  <marker id="ao" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/></marker>
+</defs>
+
+<!-- Title -->
+<text x="340" y="26" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="600">四层校验评分流程</text>
+
+<!-- Input: P1 产物 cx=340, y=40, w=200, h=36 -->
+<rect x="240" y="40" width="200" height="36" rx="8" stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe"/>
+<text x="340" y="62" font-size="12" fill="#1e40af" text-anchor="middle" font-weight="600">P1 代码产物（暂存区）</text>
+
+<!-- Arrow down: 76→90-11=79 -->
+<path d="M340,81 L 340,90" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Layer 0 group: x=30, y=94, w=620, h=60 -->
+<rect x="30" y="94" width="620" height="60" rx="8" stroke="#f59e0b" stroke-width="1.5" fill="#fffbeb"/>
+<text x="42" y="110" font-size="10" fill="#b45309">Layer 0</text>
+<!-- Main box inside: cx=340 -->
+<rect x="200" y="102" width="280" height="44" rx="6" stroke="#f59e0b" stroke-width="1" fill="#fef3c7"/>
+<text x="340" y="119" font-size="11" fill="#b45309" text-anchor="middle">资源落地检查</text>
+<text x="340" y="135" font-size="10" fill="#b45309" text-anchor="middle">图片/SVG 引用是否存在 · 自动补全</text>
+<!-- Fail branch right -->
+<rect x="510" y="104" width="128" height="40" rx="4" stroke="#ef4444" stroke-width="1" fill="#fee2e2"/>
+<text x="574" y="119" font-size="9" fill="#dc2626" text-anchor="middle">缺失：标记扣分</text>
+<text x="574" y="133" font-size="9" fill="#dc2626" text-anchor="middle">自动重试下载</text>
+
+<!-- Arrow down: 154→168-11=157 -->
+<path d="M340,159 L 340,168" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Layer 1 group: y=172 -->
+<rect x="30" y="172" width="620" height="60" rx="8" stroke="#f59e0b" stroke-width="1.5" fill="#fffbeb"/>
+<text x="42" y="188" font-size="10" fill="#b45309">Layer 1</text>
+<rect x="200" y="180" width="280" height="44" rx="6" stroke="#f59e0b" stroke-width="1" fill="#fef3c7"/>
+<text x="340" y="197" font-size="11" fill="#b45309" text-anchor="middle">静态规则校验</text>
+<text x="340" y="213" font-size="10" fill="#b45309" text-anchor="middle">Sass 变量 · flex/position 合法性</text>
+<rect x="510" y="182" width="128" height="40" rx="4" stroke="#ef4444" stroke-width="1" fill="#fee2e2"/>
+<text x="574" y="197" font-size="9" fill="#dc2626" text-anchor="middle">违规：定位扣分</text>
+<text x="574" y="211" font-size="9" fill="#dc2626" text-anchor="middle">指向 validation-guide</text>
+
+<!-- Arrow down -->
+<path d="M340,237 L 340,246" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Layer 2 group: y=250 -->
+<rect x="30" y="250" width="620" height="60" rx="8" stroke="#f59e0b" stroke-width="1.5" fill="#fffbeb"/>
+<text x="42" y="266" font-size="10" fill="#b45309">Layer 2</text>
+<rect x="200" y="258" width="280" height="44" rx="6" stroke="#f59e0b" stroke-width="1" fill="#fef3c7"/>
+<text x="340" y="275" font-size="11" fill="#b45309" text-anchor="middle">编译检查</text>
+<text x="340" y="291" font-size="10" fill="#b45309" text-anchor="middle">Less/Scss 语法 · NaN/undefined 值</text>
+<rect x="510" y="260" width="128" height="40" rx="4" stroke="#ef4444" stroke-width="1" fill="#fee2e2"/>
+<text x="574" y="275" font-size="9" fill="#dc2626" text-anchor="middle">编译失败：扣分</text>
+<text x="574" y="289" font-size="9" fill="#dc2626" text-anchor="middle">强制修复后重跑</text>
+
+<!-- Arrow down -->
+<path d="M340,315 L 340,324" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Score box: y=328, h=36, cx=340 -->
+<rect x="220" y="328" width="240" height="36" rx="8" stroke="#64748b" stroke-width="1.5" fill="#f8fafc"/>
+<text x="340" y="350" font-size="12" fill="#1e293b" text-anchor="middle">综合评分（满分 100）</text>
+
+<!-- Arrow down -->
+<path d="M340,369 L 340,378" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+
+<!-- Gate diamond: cx=340, cy=393 -->
+<polygon points="340,375 415,393 340,411 265,393" stroke="#64748b" stroke-width="1.5" fill="#f8fafc"/>
+<text x="340" y="397" font-size="11" fill="#1e293b" text-anchor="middle">≥ 90 ?</text>
+
+<!-- Pass branch: right (415,393) → -->
+<path d="M415,393 L 464,393" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ag)"/>
+<text x="438" y="387" font-size="10" fill="#166534" text-anchor="middle">通过</text>
+<rect x="468" y="375" width="100" height="36" rx="6" stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
+<text x="518" y="397" font-size="11" fill="#166534" text-anchor="middle">落地 P3</text>
+
+<!-- Fail branch: left (265,393) → -->
+<path d="M265,393 L 216,393" fill="none" stroke="#ef4444" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="238" y="387" font-size="10" fill="#dc2626" text-anchor="middle">未通过</text>
+<rect x="112" y="375" width="100" height="36" rx="6" stroke="#ef4444" stroke-width="1.5" fill="#fee2e2"/>
+<text x="162" y="391" font-size="11" fill="#dc2626" text-anchor="middle">重跑 P1</text>
+<text x="162" y="405" font-size="9" fill="#dc2626" text-anchor="middle">最多 3 轮</text>
+
+</svg>

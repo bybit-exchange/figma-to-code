@@ -1,0 +1,9 @@
+.DS_Store
+*.pyc
+.figma-to-code
+public
+visual-test
+scripts/tests/visual/sandbox/
+
+.claude/workstates/processing/
+.claude/ship-snapshot/

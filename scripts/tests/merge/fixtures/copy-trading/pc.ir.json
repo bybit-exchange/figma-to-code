@@ -1,0 +1,54 @@
+{
+  "figmaId": "8494:4291",
+  "figmaName": "Page/CopyTrading-Competition",
+  "figmaType": "FRAME",
+  "css": {"width": "1440px"},
+  "absoluteBoundingBox": {"x": 0, "y": 0, "width": 1440, "height": 3000},
+  "children": [
+    {
+      "figmaId": "8494:4295",
+      "figmaName": "Section/Hero-Banner",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex", "flexDirection": "row", "height": "600px"},
+      "absoluteBoundingBox": {"x": 0, "y": 0, "width": 1440, "height": 600},
+      "visible": true,
+      "children": [
+        {"figmaId": "8494:4296", "figmaName": "title", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Copy Trading Arena",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "hero-banner", "htmlTag": "section", "componentName": null, "props": []}
+    },
+    {
+      "figmaId": "8494:4310",
+      "figmaName": "Section/Main-Content",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex", "flexDirection": "row"},
+      "absoluteBoundingBox": {"x": 0, "y": 600, "width": 1440, "height": 2000},
+      "visible": true,
+      "children": [
+        {"figmaId": "8494:4311", "figmaName": "desc", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Compete and win rewards",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "main-content", "htmlTag": "section", "componentName": null, "props": []}
+    },
+    {
+      "figmaId": "8494:4320",
+      "figmaName": "Section/Footer",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex"},
+      "absoluteBoundingBox": {"x": 0, "y": 2600, "width": 1440, "height": 200},
+      "visible": true,
+      "children": [
+        {"figmaId": "8494:4321", "figmaName": "footer-text", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Terms and Conditions",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "footer", "htmlTag": "footer", "componentName": null, "props": []}
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+assets/en/ir-contract.svg
+  s_e6b091a1807307::t_f4183239cbf2ba 1,10,19-20,24-25,30-31,36-39,59-60,77-79,81,83-98,101
+assets/zh/ir-contract.svg
+  s_e6b091a1807307::t_f0723b15c3e509 36-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.1+5a7225d",
+  "base_commit_sha": "911a1b4195c5afa5212ee115facd21425e052173",
+  "prompts": {},
+  "sessions": {
+    "s_e6b091a1807307": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5b0fde53-bc6a-466c-8eec-8266d013b6e0",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    }
+  }
+}

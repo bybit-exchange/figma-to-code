@@ -1,0 +1,91 @@
+<svg viewBox="0 0 740 430" width="740" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>text { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',system-ui,sans-serif; }</style>
+  <marker id="aw" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/></marker>
+  <marker id="ab" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/></marker>
+  <marker id="ag" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/></marker>
+  <marker id="ao" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/></marker>
+</defs>
+
+<!-- Title -->
+<text x="370" y="26" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="600">双端独立模式（Mode D · Engine 1）产物结构</text>
+
+<!-- Two input URLs -->
+<!-- PC URL: x=80, y=42, w=200, h=36, cx=180 -->
+<rect x="80" y="42" width="200" height="36" rx="8" stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe"/>
+<text x="180" y="64" font-size="12" fill="#1e40af" text-anchor="middle" font-weight="600">PC 端 Figma URL</text>
+
+<!-- H5 URL: x=460, y=42, w=200, h=36, cx=560 -->
+<rect x="460" y="42" width="200" height="36" rx="8" stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe"/>
+<text x="560" y="64" font-size="12" fill="#1e40af" text-anchor="middle" font-weight="600">H5 端 Figma URL</text>
+
+<!-- PC pipeline group: x=20, y=90, w=320, h=160 -->
+<rect x="20" y="90" width="320" height="160" rx="10" stroke="#94a3b8" stroke-dasharray="6,4" stroke-width="1.5" fill="#f8fafc"/>
+<text x="30" y="105" font-size="11" fill="#64748b">PC 端管线（独立完整）</text>
+
+<!-- PC arrows down: from url (180,78) to pipeline (180,113-11=102) -->
+<path d="M180,83 L 180,97" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ab)"/>
+
+<!-- PC box 1: convert.py, x=40, y=108, w=280, h=36, cx=180 -->
+<rect x="40" y="108" width="280" height="36" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+<text x="180" y="130" font-size="11" fill="#b45309" text-anchor="middle">convert.py → IR → tsx + less</text>
+<!-- Arrow down -->
+<path d="M180,149 L 180,161" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+<!-- PC box 2: P1.5, x=40, y=165, w=280, h=36 -->
+<rect x="40" y="165" width="280" height="36" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+<text x="180" y="187" font-size="11" fill="#b45309" text-anchor="middle">P1.5 语义拆分 · validate ≥90</text>
+<!-- Arrow down: bottom=201, go to 215-11=204 -->
+<path d="M180,206 L 180,218" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+<!-- PC output box -->
+<rect x="40" y="222" width="280" height="20" rx="4" stroke="#22c55e" stroke-width="1" fill="#d1fae5"/>
+<text x="180" y="235" font-size="10" fill="#166534" text-anchor="middle">MyPage/（落地目录）</text>
+
+<!-- H5 pipeline group: x=400, y=90, w=320, h=160 -->
+<rect x="400" y="90" width="320" height="160" rx="10" stroke="#94a3b8" stroke-dasharray="6,4" stroke-width="1.5" fill="#f8fafc"/>
+<text x="410" y="105" font-size="11" fill="#64748b">H5 端管线（独立完整）</text>
+
+<!-- H5 arrows down -->
+<path d="M560,83 L 560,97" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ab)"/>
+
+<!-- H5 box 1 -->
+<rect x="420" y="108" width="280" height="36" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+<text x="560" y="130" font-size="11" fill="#b45309" text-anchor="middle">convert.py → IR → tsx + less</text>
+<path d="M560,149 L 560,161" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+<!-- H5 box 2 -->
+<rect x="420" y="165" width="280" height="36" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+<text x="560" y="187" font-size="11" fill="#b45309" text-anchor="middle">P1.5 语义拆分 · validate ≥90</text>
+<path d="M560,206 L 560,218" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
+<rect x="420" y="222" width="280" height="20" rx="4" stroke="#22c55e" stroke-width="1" fill="#d1fae5"/>
+<text x="560" y="235" font-size="10" fill="#166534" text-anchor="middle">MyPageH5/（落地目录）</text>
+
+<!-- mv step: both directories → unified structure -->
+<!-- Arrow from PC output (180,242) curve down -->
+<path d="M180,247 C 180,280 370,280 370,293" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ag)"/>
+<!-- Arrow from H5 output (560,242) curve down -->
+<path d="M560,247 C 560,280 370,280 370,293" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ag)"/>
+<!-- mv label -->
+<text x="370" y="275" font-size="10" fill="#166534" text-anchor="middle">mv 重组 + 生成入口</text>
+
+<!-- Unified structure box: x=120, y=297, w=500, h=110 -->
+<rect x="120" y="297" width="500" height="110" rx="8" stroke="#22c55e" stroke-width="2" fill="#f0fdf4"/>
+<text x="370" y="314" font-size="11" fill="#166534" text-anchor="middle" font-weight="600">src/pages/MyPage/</text>
+<!-- Row 1: index.tsx -->
+<rect x="135" y="320" width="220" height="28" rx="4" stroke="#22c55e" stroke-width="1" fill="#d1fae5"/>
+<text x="245" y="337" font-size="10" fill="#166534" text-anchor="middle">index.tsx（isMobile 切换入口）</text>
+<!-- Row 2: pc/ -->
+<rect x="135" y="355" width="100" height="44" rx="4" stroke="#3b82f6" stroke-width="1" fill="#dbeafe"/>
+<text x="185" y="373" font-size="10" fill="#1e40af" text-anchor="middle">pc/</text>
+<text x="185" y="389" font-size="9" fill="#1e40af" text-anchor="middle">index.tsx + .less</text>
+<!-- Row 3: h5/ -->
+<rect x="245" y="355" width="100" height="44" rx="4" stroke="#a855f7" stroke-width="1" fill="#f3e8ff"/>
+<text x="295" y="373" font-size="10" fill="#6b21a8" text-anchor="middle">h5/</text>
+<text x="295" y="389" font-size="9" fill="#6b21a8" text-anchor="middle">index.tsx + .less</text>
+<!-- Row 4: hooks/ -->
+<rect x="355" y="355" width="100" height="44" rx="4" stroke="#94a3b8" stroke-width="1" fill="#f1f5f9"/>
+<text x="405" y="373" font-size="10" fill="#475569" text-anchor="middle">hooks/</text>
+<text x="405" y="389" font-size="9" fill="#475569" text-anchor="middle">usePageEnv.ts</text>
+
+<!-- Bottom note -->
+<text x="370" y="420" font-size="10" fill="#64748b" text-anchor="middle">两端各自独立跑完整管线，运行时 isMobile 决定渲染哪端；两端 CSS 完全独立，无合并</text>
+
+</svg>

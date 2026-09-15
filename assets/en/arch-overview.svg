@@ -1,0 +1,133 @@
+<svg viewBox="0 0 760 490" width="760" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+  </marker>
+  <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+  </marker>
+</defs>
+
+<!-- ===== Layer 1: Group background boxes ===== -->
+
+<!-- Engine 1 group box: x=20, y=85, w=316, h=327, bottom=412 -->
+<rect x="20" y="85" width="316" height="327" rx="10"
+      stroke="#94a3b8" stroke-dasharray="6,4" stroke-width="1.5" fill="#f8fafc"/>
+<text x="30" y="99" font-size="11" fill="#64748b">Engine 1 (Script Pipeline)</text>
+
+<!-- Engine 2 group box: x=424, y=85, w=316, h=327, bottom=412 -->
+<rect x="424" y="85" width="316" height="327" rx="10"
+      stroke="#94a3b8" stroke-dasharray="6,4" stroke-width="1.5" fill="#f8fafc"/>
+<text x="434" y="99" font-size="11" fill="#64748b">Engine 2 (AI Lightweight)</text>
+
+<!-- ===== Layer 2: Arrows ===== -->
+
+<!-- Input fork → Engine 1: from (380,63) curve to (178,97) -->
+<path d="M380,63 C 380,80 178,80 178,97"
+      fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+<!-- Input fork → Engine 2: from (380,63) curve to (582,97) -->
+<path d="M380,63 C 380,80 582,80 582,97"
+      fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+<!-- Engine 1 internal arrows (orange) -->
+<!-- Box1(bottom=144) → Box2(top=172): start=149, end=161, visible=12px -->
+<path d="M178,149 L 178,161" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+<!-- Box2(bottom=208) → Box3(top=236): start=213, end=225, visible=12px -->
+<path d="M178,213 L 178,225" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+<!-- Box3(bottom=272) → Box4(top=300): start=277, end=289, visible=12px -->
+<path d="M178,277 L 178,289" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+<!-- Box4(bottom=336) → Box5(top=364): start=341, end=353, visible=12px -->
+<path d="M178,341 L 178,353" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+<!-- Engine 2 internal arrows (purple) -->
+<!-- Box1(bottom=144) → Box2(top=220): start=149, end=209, visible=60px -->
+<path d="M582,149 L 582,209" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+<!-- Box2(bottom=274) → Box3(top=352): start=279, end=341, visible=62px -->
+<path d="M582,279 L 582,341" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+<!-- Engine 1 → Output: from (178,405) curve to (380,417) -->
+<path d="M178,405 C 178,418 380,418 380,417"
+      fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+<!-- Engine 2 → Output: from (582,405) curve to (380,417) -->
+<path d="M582,405 C 582,418 380,418 380,417"
+      fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+<!-- ===== Layer 3: Content boxes ===== -->
+
+<!-- Input box: x=270, y=22, w=220, h=36, center_x=380, center_y=40 -->
+<rect x="270" y="22" width="220" height="36" rx="8"
+      stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe"/>
+
+<!-- Engine 1 Box 1: y=108, h=36, center_y=126 -->
+<rect x="35" y="108" width="286" height="36" rx="6"
+      stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+
+<!-- Engine 1 Box 2: y=172, h=36, center_y=190 -->
+<rect x="35" y="172" width="286" height="36" rx="6"
+      stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+
+<!-- Engine 1 Box 3: y=236, h=36, center_y=254 -->
+<rect x="35" y="236" width="286" height="36" rx="6"
+      stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+
+<!-- Engine 1 Box 4: y=300, h=36, center_y=318 -->
+<rect x="35" y="300" width="286" height="36" rx="6"
+      stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
+
+<!-- Engine 1 Box 5 (green): y=364, h=36, center_y=382 -->
+<rect x="35" y="364" width="286" height="36" rx="6"
+      stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
+
+<!-- Engine 2 Box 1: y=108, h=36, center_x=582, center_y=126 -->
+<rect x="439" y="108" width="286" height="36" rx="6"
+      stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff"/>
+
+<!-- Engine 2 Box 2 (double height): y=220, h=54, center_y=247 -->
+<rect x="439" y="220" width="286" height="54" rx="6"
+      stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff"/>
+
+<!-- Engine 2 Box 3 (green): y=352, h=36, center_y=370 -->
+<rect x="439" y="352" width="286" height="36" rx="6"
+      stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
+
+<!-- Output box: x=270, y=428, w=220, h=36, center_x=380, center_y=446 -->
+<rect x="270" y="428" width="220" height="36" rx="8"
+      stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
+
+<!-- ===== Layer 4: Text labels ===== -->
+
+<!-- Input text: center_y=40, text_y=44 -->
+<text x="380" y="44" font-size="12" fill="#1e40af" text-anchor="middle" font-weight="600">Figma URL + MCP Token</text>
+
+<!-- Engine 1 texts -->
+<text x="178" y="130" font-size="12" fill="#b45309" text-anchor="middle">Figma API → Raw JSON</text>
+<text x="178" y="194" font-size="12" fill="#b45309" text-anchor="middle">ir_builder.py → IR Layer</text>
+<text x="178" y="258" font-size="12" fill="#b45309" text-anchor="middle">tsx + less/scss Code Gen</text>
+<text x="178" y="322" font-size="12" fill="#b45309" text-anchor="middle">split_codegen.py Semantic Split</text>
+<text x="178" y="386" font-size="12" fill="#166534" text-anchor="middle">validate.py · Score ≥ 90</text>
+
+<!-- Engine 2 texts -->
+<text x="582" y="130" font-size="12" fill="#6b21a8" text-anchor="middle">figma-context server :7181</text>
+<!-- Box 2 double line: center_y=247, line1=240, line2=258 -->
+<text x="582" y="241" font-size="12" fill="#6b21a8" text-anchor="middle">P1-AI: Query /context, Write Code</text>
+<text x="582" y="259" font-size="10" fill="#6b21a8" text-anchor="middle">(Exact CSS from API, no inference)</text>
+<text x="582" y="374" font-size="12" fill="#166534" text-anchor="middle">P2-AI: Visual Diff · ≤ 3 rounds</text>
+
+<!-- Output text: center_y=446, text_y=450 -->
+<text x="380" y="450" font-size="12" fill="#166534" text-anchor="middle" font-weight="600">React + CSS Modules Output</text>
+
+</svg>

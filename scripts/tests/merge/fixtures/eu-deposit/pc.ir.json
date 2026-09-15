@@ -1,0 +1,42 @@
+{
+  "figmaId": "250:2618",
+  "figmaName": "Web",
+  "figmaType": "FRAME",
+  "css": {"width": "1440px"},
+  "absoluteBoundingBox": {"x": 3348, "y": 48, "width": 1440, "height": 7718},
+  "children": [
+    {
+      "figmaId": "250:2620",
+      "figmaName": "2606-T90590 - EU unregulated exchange migration campaign - 1440x750 - Example",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex", "flexDirection": "row", "padding": "120px"},
+      "absoluteBoundingBox": {"x": 0, "y": 48, "width": 1440, "height": 750},
+      "visible": true,
+      "children": [
+        {"figmaId": "250:2625", "figmaName": "headline", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Move Your Funds, Get Rewarded",
+         "css": {}, "children": [], "visible": true},
+        {"figmaId": "250:2626", "figmaName": "sub", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "MiCAR-authorised in Austria. Up to $30,000 cashback",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "hero", "htmlTag": "section", "componentName": null, "props": []}
+    },
+    {
+      "figmaId": "250:2640",
+      "figmaName": "Join",
+      "figmaType": "FRAME",
+      "isTextNode": false, "isImageNode": false, "isVectorNode": false,
+      "css": {"display": "flex", "flexDirection": "row", "gap": "40px"},
+      "absoluteBoundingBox": {"x": 0, "y": 6500, "width": 1440, "height": 200},
+      "visible": true,
+      "children": [
+        {"figmaId": "250:2641", "figmaName": "cta", "figmaType": "TEXT",
+         "isTextNode": true, "textContent": "Join 70+ million customers worldwide",
+         "css": {}, "children": [], "visible": true}
+      ],
+      "semantic": {"className": "join", "htmlTag": "section", "componentName": null, "props": []}
+    }
+  ]
+}

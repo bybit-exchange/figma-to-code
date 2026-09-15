@@ -1,0 +1,90 @@
+<svg viewBox="0 0 560 345" width="560" height="345" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }</style>
+  <!-- 蓝色箭头，markerUnits=userSpaceOnUse 防止 stroke-width 缩放 -->
+  <marker id="arr-b" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+  </marker>
+</defs>
+
+<!-- 标题，内容中心 x=(65+495)/2=280 -->
+<text x="280" y="20" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">D2C 方案评估维度</text>
+
+<!-- ===== Layer 1: 三角形轮廓 ===== -->
+<!-- 顶点: Top(280,70) BL(140,310) BR(420,310) -->
+<!-- Top-BL: √(140²+240²)=√77200≈277.8  BL-BR:280  近似等边 ✓ -->
+<polygon points="280,70 140,310 420,310"
+         fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+<!-- ===== Layer 2: 虚线箭头（顶点→中心圆） ===== -->
+<!-- 中心圆 (280,230) r=55
+     箭头规则: 起点=标签边界+5px, 终点=圆边界-11px(5px留白+6px箭头)
+
+     Arrow 1 (↓ Top→Center):
+       起点: Top标签底(45+50=95)+5=100, 即 (280,100)
+       圆顶: 230-55=175. 终点=175-11=164. 路径 M280,100 L280,164
+
+     Arrow 2 (BL→Center):
+       起点: BL标签右(65+150=215)+5=220, 即 (220,310)
+       圆边朝BL方向: center+(55×unit_center→BL)
+       unit=(140-280,310-230)/161.2=(-0.869,0.497) → 圆边=(232,257)
+       travel_unit from(220,310)to(232,257)=(12,-53)/54.3=(0.221,-0.975)
+       终点=(232,257)-11×(0.221,-0.975)=(229.6,267.7)≈(230,268)
+       路径 M220,310 L230,268
+
+     Arrow 3 (BR→Center, 对称):
+       起点: BR标签左(345)-5=340, 即 (340,310)
+       圆边朝BR=(328,257). travel=(-0.221,-0.975)
+       终点=(328+2.4,257+10.7)=(330.4,267.7)≈(330,268)
+       路径 M340,310 L330,268 -->
+<path d="M280,100 L280,164" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+<path d="M220,310 L230,268" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+<path d="M340,310 L330,268" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+
+<!-- ===== Layer 3: 中心圆 (cx=280 cy=230 r=55) ===== -->
+<circle cx="280" cy="230" r="55" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+<!-- 3行文字，间距13px，基线 y=221/234/247 -->
+<text x="280" y="221" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">实现 90%+ 还原度</text>
+<text x="280" y="236" font-size="10" fill="#1d4ed8" text-anchor="middle">上下文占用 + 时间</text>
+<text x="280" y="249" font-size="9"  fill="#3b82f6" text-anchor="middle">三个维度共同决定</text>
+
+<!-- ===== Layer 3: 顶点标签框 ===== -->
+
+<!-- Top: 首轮还原度 (green)  x=205 y=45 w=150 h=50 cx=280 cy=70 -->
+<rect x="205" y="45" width="150" height="50" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+<rect x="205" y="45" width="150" height="4" rx="8" fill="#22c55e"/>
+<rect x="205" y="48" width="150" height="1" fill="#22c55e"/>
+
+<!-- BL: 过程稳定性 (purple)  x=65 y=285 w=150 h=50 cx=140 cy=310 -->
+<rect x="65"  y="285" width="150" height="50" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+<rect x="65"  y="285" width="150" height="4" rx="8" fill="#a855f7"/>
+<rect x="65"  y="288" width="150" height="1" fill="#a855f7"/>
+
+<!-- BR: 资源成本 (amber)  x=345 y=285 w=150 h=50 cx=420 cy=310 -->
+<rect x="345" y="285" width="150" height="50" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+<rect x="345" y="285" width="150" height="4" rx="8" fill="#f59e0b"/>
+<rect x="345" y="288" width="150" height="1" fill="#f59e0b"/>
+
+<!-- ===== Layer 4: 标签文字 ===== -->
+
+<!-- Top (cx=280, content_center_y=(49+95)/2=72)
+     name_y=72-7+12×0.35=69  sub_y=72+7+9×0.35=82 -->
+<text x="280" y="69" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">首轮还原度</text>
+<text x="280" y="82" font-size="9"  fill="#15803d" text-anchor="middle">不经干预的初始还原质量 · 越高越好</text>
+
+<!-- BL (cx=140, content_center_y=(289+335)/2=312)
+     name_y=309  sub_y=322 -->
+<text x="140" y="309" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">过程稳定性</text>
+<text x="140" y="322" font-size="9"  fill="#7e22ce" text-anchor="middle">执行结果可预测 · 越稳越好</text>
+
+<!-- BR (cx=420, content_center_y=312) -->
+<text x="420" y="309" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">资源成本</text>
+<text x="420" y="322" font-size="9"  fill="#b45309" text-anchor="middle">上下文 + token 开销 · 越低越好</text>
+
+<!-- ===== Layer 4: 边注释（沿三角形边旋转） ===== -->
+<!-- 左边注释：中点(210,190)向外偏移12px → (200,184) -->
+<text x="200" y="184" font-size="9" fill="#94a3b8" text-anchor="middle" transform="rotate(-60,200,184)">首轮越高，修正越少</text>
+<!-- 右边注释：中点(350,190)向外偏移12px → (360,184) -->
+<text x="360" y="184" font-size="9" fill="#94a3b8" text-anchor="middle" transform="rotate(60,360,184)">成本越低，ROI 越高</text>
+
+</svg>

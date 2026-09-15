@@ -1,0 +1,93 @@
+<svg viewBox="0 0 560 355" width="560" height="355" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }</style>
+  <!-- blue arrow, markerUnits=userSpaceOnUse prevents stroke-width scaling -->
+  <marker id="arr-b" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+  </marker>
+</defs>
+
+<!-- Title: content center x=(25+535)/2=280 -->
+<text x="280" y="20" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">D2C Solution Evaluation Dimensions</text>
+
+<!-- Triangle: Top(280,70) BL(140,310) BR(420,310) -->
+<polygon points="280,70 140,310 420,310"
+         fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+<!-- Dashed arrows: vertex labels → center circle (cx=280,cy=230,r=55)
+
+     Arrow 1 (Top→Center ↓):
+       Top box bottom y=95, start=(280,100).
+       Circle top=175, end=175-11=164. Path M280,100 L280,164
+
+     Arrow 2 (BL→Center):
+       BL box right edge=25+230=255, start=(260,310).
+       SC=(20,-80), |SC|=82.46, unit=(0.2425,-0.9701)
+       Circle entry=center+55×(-unit)=(280-13.34,230+53.36)=(266.66,283.36)
+       end=entry−11×unit=(266.66−2.67,283.36+10.67)=(264,294) → use (265,291)
+
+     Arrow 3 (BR→Center, symmetric):
+       BR box left edge=305, start=(300,310).
+       SC=(-20,-80), |SC|=82.46, unit=(-0.2425,-0.9701)
+       end=(280+13.34−2.67−(−2.67), 230+53.36+10.67)=(295,291) -->
+<path d="M280,100 L280,164" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+<path d="M260,310 L265,291" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+<path d="M300,310 L295,291" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+
+<!-- Center circle (cx=280,cy=230,r=55,diameter=110)
+     Text at 9px: each char ~5px. Safe budget ~105px per line.
+     L1 y=222: "Achieve 90%+ Fidelity" 21ch×5=105px, avail=2√(55²−8²)=108px ✓
+     L2 y=235: "Context usage + time"  20ch×5=100px, avail=2√(55²−5²)=109px ✓
+     L3 y=248: "3 dimensions determine" 22ch×5=110px... use "3 dim. determine" 16ch=80px ✓ -->
+<circle cx="280" cy="230" r="55" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+<text x="280" y="222" font-size="9" font-weight="bold" fill="#1e40af" text-anchor="middle">Achieve 90%+ Fidelity</text>
+<text x="280" y="235" font-size="9" fill="#1d4ed8" text-anchor="middle">Context usage + time</text>
+<text x="280" y="248" font-size="9" fill="#3b82f6" text-anchor="middle">3 dim. determine</text>
+
+<!-- Vertex label boxes
+     Top:  centered x=280, need w≥270(text)+20(pad)=290 → x=135,w=290
+     BL:   centered x=140, need w≥210+20=230            → x=25,w=230
+     BR:   centered x=420, need w≥210+20=230            → x=305,w=230 (right=535<560 ✓) -->
+
+<!-- Top: First-Pass Fidelity (green) x=135,y=45,w=290,h=50 -->
+<rect x="135" y="45" width="290" height="50" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+<rect x="135" y="45" width="290" height="4" rx="8" fill="#22c55e"/>
+<rect x="135" y="48" width="290" height="1" fill="#22c55e"/>
+
+<!-- BL: Process Stability (purple) x=25,y=285,w=230,h=50 -->
+<rect x="25"  y="285" width="230" height="50" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+<rect x="25"  y="285" width="230" height="4" rx="8" fill="#a855f7"/>
+<rect x="25"  y="288" width="230" height="1" fill="#a855f7"/>
+
+<!-- BR: Resource Cost (amber) x=305,y=285,w=230,h=50 -->
+<rect x="305" y="285" width="230" height="50" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+<rect x="305" y="285" width="230" height="4" rx="8" fill="#f59e0b"/>
+<rect x="305" y="288" width="230" height="1" fill="#f59e0b"/>
+
+<!-- Vertex label text
+     Top  content center y=(49+95)/2=72: title y≈69, sub y≈82
+     BL   content center y=(289+335)/2=312: title y≈309, sub y≈322
+     BR   same -->
+
+<!-- Top: "First-Pass Fidelity" 19ch×6.5=124px<290 ✓
+          "Initial quality without intervention · higher is better" 54ch×5=270px<280 ✓ -->
+<text x="280" y="69" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">First-Pass Fidelity</text>
+<text x="280" y="82" font-size="9"  fill="#15803d" text-anchor="middle">Initial quality without intervention · higher is better</text>
+
+<!-- BL: "Process Stability" 17ch×6.5=111px<230 ✓
+         "Predictable output · more stable is better" 42ch×5=210px<220 ✓ -->
+<text x="140" y="309" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">Process Stability</text>
+<text x="140" y="322" font-size="9"  fill="#7e22ce" text-anchor="middle">Predictable output · more stable is better</text>
+
+<!-- BR: "Resource Cost" 13ch×6.5=85px<230 ✓
+         "Context + token overhead · lower is better" 42ch×5=210px<220 ✓ -->
+<text x="420" y="309" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">Resource Cost</text>
+<text x="420" y="322" font-size="9"  fill="#b45309" text-anchor="middle">Context + token overhead · lower is better</text>
+
+<!-- Edge annotations: moved 12px outward from triangle edges
+     Left:  midpoint(210,190) + outward(-0.868,-0.497)×12 → (200,184)
+     Right: midpoint(350,190) + outward(+0.868,-0.497)×12 → (360,184) -->
+<text x="200" y="184" font-size="9" fill="#94a3b8" text-anchor="middle" transform="rotate(-60,200,184)">higher fidelity, fewer fixes</text>
+<text x="360" y="184" font-size="9" fill="#94a3b8" text-anchor="middle" transform="rotate(60,360,184)">lower cost, higher ROI</text>
+
+</svg>

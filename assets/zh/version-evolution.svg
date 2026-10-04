@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="85 0 592 715" width="592" height="715" role="img" aria-labelledby="title desc">
+  <title id="title">两次推倒重来：版本演进</title>
+  <desc id="desc">从 v1 截图猜数字与 v2 多 Agent 并行的失败尝试，转向 Figma 结构化数据驱动的 v3 Python 脚本管线和 v4 设计系统对接。</desc>
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }</style>
+    <marker id="arrow-gray" markerWidth="9" markerHeight="9" refX="2" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 L2,4.5 Z" fill="#8491a6"/></marker>
+    <marker id="arrow-purple" markerWidth="9" markerHeight="9" refX="2" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 L2,4.5 Z" fill="#8c4cff"/></marker>
+    <marker id="arrow-green" markerWidth="9" markerHeight="9" refX="2" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 L2,4.5 Z" fill="#35ad52"/></marker>
+  </defs>
+  <rect x="85" width="592" height="715" fill="#fff"/>
+  <text x="381" y="46" fill="#202734" font-size="23" font-weight="700" text-anchor="middle">两次推倒重来：版本演进</text>
+
+  <rect x="111.5" y="63.5" width="539" height="243" rx="15" fill="#f8faff" stroke="#8190aa" stroke-width="2" stroke-dasharray="9 6"/>
+  <text x="127" y="85" fill="#526178" font-size="18">失败的尝试</text>
+  <rect x="152.5" y="99" width="457" height="70" rx="10" fill="#fff0ef" stroke="#f26868" stroke-width="2"/>
+  <text x="381" y="122" fill="#8f3025" font-size="20" font-weight="700" text-anchor="middle">v1 截图猜数字 + pixelmatch 循环</text>
+  <text x="381" y="150" fill="#d8352b" font-size="16" text-anchor="middle">× 首轮不稳定，多轮迭代耗时不可预估</text>
+  <path d="M381 175 L381 183" fill="none" stroke="#8491a6" stroke-width="2"/>
+  <path d="M375 183 L381 195 L387 183 Z" fill="#8491a6"/>
+  <rect x="152.5" y="200" width="457" height="82" rx="10" fill="#fff0ef" stroke="#f26868" stroke-width="2"/>
+  <text x="381" y="229" fill="#8f3025" font-size="19" text-anchor="middle">v2 多 Agent 并行 + 浏览器截图</text>
+  <text x="381" y="261" fill="#78869a" font-size="16" text-anchor="middle">× 资源竞争，并行反而比串行慢</text>
+  <path d="M381 294 L381 315" fill="none" stroke="#8c4cff" stroke-width="2"/>
+  <path d="M375 314 L381 326 L387 314 Z" fill="#8c4cff"/>
+
+  <rect x="111.5" y="331" width="539" height="82" rx="12" fill="#f7f1ff" stroke="#8c4cff" stroke-width="3"/>
+  <text x="381" y="361" fill="#58259c" font-size="20" font-weight="700" text-anchor="middle">★ 关键洞察</text>
+  <text x="381" y="390" fill="#6634c9" font-size="17" text-anchor="middle">Figma API 本来就是结构化数据，完全不需要 AI 猜数字</text>
+  <rect x="111.5" y="463.5" width="539" height="228" rx="15" fill="#f3fff8" stroke="#31b451" stroke-width="2" stroke-dasharray="9 6"/>
+  <path d="M381 419 L381 477" fill="none" stroke="#8c4cff" stroke-width="2"/>
+  <path d="M375 477 L381 489 L387 477 Z" fill="#8c4cff"/>
+  <text x="127" y="486" fill="#278445" font-size="18">成功的方向</text>
+  <rect x="152.5" y="499" width="457" height="70" rx="10" fill="#dcfaea" stroke="#35ad52" stroke-width="2"/>
+  <text x="381" y="524" fill="#315d40" font-size="20" font-weight="700" text-anchor="middle">v3 Python 脚本管线</text>
+  <text x="381" y="551" fill="#315d40" font-size="16" text-anchor="middle">确定性执行、稳定可重复、不依赖模型能力</text>
+  <path d="M381 575 L381 580" fill="none" stroke="#35ad52" stroke-width="2"/>
+  <path d="M375 580 L381 592 L387 580 Z" fill="#35ad52"/>
+  <rect x="152.5" y="598" width="457" height="70" rx="10" fill="#dcfaea" stroke="#35ad52" stroke-width="2"/>
+  <text x="381" y="623" fill="#315d40" font-size="20" font-weight="700" text-anchor="middle">v4 + 设计系统对接</text>
+  <text x="381" y="649" fill="#315d40" font-size="16" text-anchor="middle">Code Connect · Design Token · 双主题适配</text>
+</svg>

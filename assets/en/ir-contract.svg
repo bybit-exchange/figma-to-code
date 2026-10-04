@@ -1,103 +1,70 @@
-<svg viewBox="0 0 780 370" width="780" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <style>text { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',system-ui,sans-serif; }</style>
-  <marker id="aw" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/></marker>
-  <marker id="ao" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/></marker>
-  <marker id="ap" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/></marker>
-</defs>
-
-<!-- Title -->
-<text x="390" y="28" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="600">IR Layer: The Contract Between Script and AI</text>
-
-<!-- Script zone (dashed, orange) -->
-<!-- x=15, y=50, w=185, h=265, bottom=315 -->
-<rect x="15" y="50" width="185" height="265" rx="10" stroke="#f59e0b" stroke-dasharray="6,4" stroke-width="1.5" fill="#fffbeb"/>
-<text x="25" y="65" font-size="11" fill="#b45309">Script Layer</text>
-<!-- Box 1: Figma API, y=73, h=36, cx=107 -->
-<rect x="28" y="73" width="159" height="36" rx="6" stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe"/>
-<text x="107" y="95" font-size="11" fill="#1e40af" text-anchor="middle">Figma API Raw Data</text>
-<!-- Arrow down: box1 bottom=109+5=114, box2 top=130-11=119 -->
-<path d="M107,114 L 107,119" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
-<!-- Box 2: extract_css, y=130, h=36 -->
-<rect x="28" y="130" width="159" height="36" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
-<text x="107" y="152" font-size="11" fill="#b45309" text-anchor="middle">extract_css()</text>
-<!-- Arrow down: box2 bottom=166+5=171, box3 top=187-11=176 -->
-<path d="M107,171 L 107,176" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
-<!-- Box 3: result, y=187, h=54 double -->
-<rect x="28" y="187" width="159" height="54" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7"/>
-<text x="107" y="209" font-size="11" fill="#b45309" text-anchor="middle">padding→24px</text>
-<text x="107" y="227" font-size="11" fill="#b45309" text-anchor="middle">color→#1e293b</text>
-<!-- Arrow down: box3 bottom=241+5=246, box4 top=262-11=251 -->
-<path d="M107,246 L 107,251" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
-<!-- Box 4: freeze label, y=262, h=36 -->
-<rect x="28" y="262" width="159" height="36" rx="6" stroke="#22c55e" stroke-width="1.5" fill="#d1fae5"/>
-<text x="107" y="284" font-size="11" fill="#166534" text-anchor="middle">Write to IR · Frozen</text>
-
-<!-- Write arrow: smooth S-curve, endpoint x=340 in center of css box (tip at 346) -->
-<path d="M200,280 C 225,280 225,108 340,108" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ao)"/>
-<!-- label near curve midpoint y=195, curve x≈228, end at x=218 gap 10px -->
-<text x="230" y="195" font-size="9" fill="#b45309" text-anchor="end">Write</text>
-
-<!-- IR card (center) -->
-<!-- x=268, y=50, w=200, h=265, bottom=315 -->
-<rect x="268" y="50" width="200" height="265" rx="8" stroke="#64748b" stroke-width="2" fill="white"/>
-<text x="368" y="70" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="600">NodeIR</text>
-<!-- Divider line -->
-<line x1="268" y1="77" x2="468" y2="77" stroke="#e2e8f0" stroke-width="1"/>
-
-<!-- Row: css (yellow) y=82, h=52 -->
-<rect x="275" y="82" width="186" height="52" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-<text x="283" y="100" font-size="10" fill="#b45309" font-weight="600">css</text>
-<text x="283" y="116" font-size="9" fill="#b45309">padding / color / gap / ...</text>
-<text x="455" y="105" font-size="8" fill="#b45309" text-anchor="end">← Script writes, AI read-only</text>
-
-<!-- Row: flags (purple) y=140, h=70 -->
-<rect x="275" y="140" width="186" height="70" rx="4" fill="#f3e8ff" stroke="#a855f7" stroke-width="1"/>
-<text x="283" y="158" font-size="10" fill="#6b21a8" font-weight="600">isComponentInstance</text>
-<text x="283" y="174" font-size="10" fill="#6b21a8">isVectorNode</text>
-<text x="283" y="190" font-size="10" fill="#6b21a8">isTextNode</text>
-<!-- y=178: between isVectorNode(y=174) and isTextNode(y=190), away from flags box borders -->
-<text x="455" y="178" font-size="8" fill="#6b21a8" text-anchor="end">← AI decision signals</text>
-
-<!-- Row: data (blue) y=216, h=36 -->
-<rect x="275" y="216" width="186" height="36" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
-<text x="283" y="234" font-size="10" fill="#1e40af">textContent / figmaName</text>
-<text x="455" y="234" font-size="8" fill="#1e40af" text-anchor="end">← Figma raw</text>
-
-<!-- Row: children (gray) y=258, h=36 -->
-<rect x="275" y="258" width="186" height="40" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<text x="283" y="280" font-size="10" fill="#64748b">children: [NodeIR]</text>
-<text x="455" y="280" font-size="8" fill="#64748b" text-anchor="end">← recursive</text>
-
-<!-- Read arrow: IR.flags → AI -->
-<!-- From (468+5=473, 175) to (537-11=526, 185) -->
-<path d="M473,175 L 526,175" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#ap)"/>
-<text x="500" y="168" font-size="9" fill="#6b21a8" text-anchor="middle">Read-only</text>
-
-<!-- AI zone (dashed, purple): widened to w=215 to fit EN text -->
-<!-- x=537, y=50, w=215, h=265, right=752 -->
-<rect x="537" y="50" width="215" height="265" rx="10" stroke="#a855f7" stroke-dasharray="6,4" stroke-width="1.5" fill="#faf5ff"/>
-<text x="547" y="65" font-size="11" fill="#6b21a8">AI Layer</text>
-<!-- AI boxes: x=550, w=188, cx=644 (wider for EN text) -->
-<!-- Box: Code Connect, y=73 -->
-<rect x="550" y="73" width="188" height="36" rx="6" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff"/>
-<text x="644" y="95" font-size="11" fill="#6b21a8" text-anchor="middle">Code Connect Query</text>
-<!-- Arrow down: box top=130-11=119 -->
-<path d="M644,114 L 644,119" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
-<!-- Box: Component Library Matching, y=130; "Component Library Matching" 26ch×6.5=169px < 188px ✓ -->
-<rect x="550" y="130" width="188" height="36" rx="6" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff"/>
-<text x="644" y="152" font-size="11" fill="#6b21a8" text-anchor="middle">Component Library Matching</text>
-<!-- Arrow down: box top=187-11=176 -->
-<path d="M644,171 L 644,176" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)"/>
-<!-- Box: Semantic Naming, y=187, h=36 -->
-<rect x="550" y="187" width="188" height="36" rx="6" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff"/>
-<text x="644" y="209" font-size="11" fill="#6b21a8" text-anchor="middle">Semantic Naming</text>
-<!-- Box: constraints, y=255, h=43 -->
-<rect x="550" y="255" width="188" height="43" rx="6" stroke="#94a3b8" stroke-width="1" fill="#f1f5f9"/>
-<text x="644" y="274" font-size="10" fill="#64748b" text-anchor="middle">Never touches css field</text>
-<text x="644" y="289" font-size="10" fill="#64748b" text-anchor="middle">Generates no CSS values</text>
-
-<!-- Bottom note -->
-<text x="390" y="345" font-size="10" fill="#64748b" text-anchor="middle">css is precisely extracted by script and frozen · isComponentInstance etc. are the only AI decision points</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 960 450" width="960" height="450">
+  <defs>
+    <style>text { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',system-ui,sans-serif; }</style>
+    <marker id="aw" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8" />
+    </marker>
+    <marker id="ao" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b" />
+    </marker>
+    <marker id="ap" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7" />
+    </marker>
+  </defs>
+  <rect x="0" y="-4" width="960" height="450" fill="#fff" />
+  <text x="480" y="33" font-size="16" fill="#1e293b" text-anchor="middle" font-weight="600">IR Layer: The Contract Between Script and AI</text>
+  <rect x="24" y="61" width="214" height="324" rx="10" stroke="#f59e0b" stroke-dasharray="6,4" stroke-width="1.5" fill="#fffbeb" />
+  <text x="38" y="79" font-size="11" fill="#b45309">Script Layer</text>
+  <rect x="41" y="95" width="180" height="38" rx="6" stroke="#3b82f6" stroke-width="1.5" fill="#dbeafe" />
+  <text x="131" y="118.0" font-size="11" fill="#1e40af" text-anchor="middle">Figma API Raw Data</text>
+  <path d="M131,138 L 131,155" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)" />
+  <rect x="41" y="166" width="180" height="38" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7" />
+  <text x="131" y="189.0" font-size="11" fill="#b45309" text-anchor="middle">extract_css()</text>
+  <path d="M131,209 L 131,226" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)" />
+  <rect x="41" y="237" width="180" height="56" rx="6" stroke="#f59e0b" stroke-width="1.5" fill="#fef3c7" />
+  <text x="131" y="258" font-size="11" fill="#b45309" text-anchor="middle">padding→24px</text>
+  <text x="131" y="276" font-size="11" fill="#b45309" text-anchor="middle">color→#1e293b</text>
+  <path d="M131,298 L 131,315" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)" />
+  <rect x="41" y="326" width="180" height="38" rx="6" stroke="#22c55e" stroke-width="1.5" fill="#d1fae5" />
+  <text x="131" y="349.0" font-size="11" fill="#166534" text-anchor="middle">Write to IR · Frozen</text>
+  <path d="M226,345 C 304,345 286,124 318,124" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ao)" />
+  <text x="280" y="222" font-size="9" fill="#b45309" text-anchor="end">Write</text>
+  <g transform="translate(40 0)">
+  <rect x="290" y="61" width="270" height="324" rx="8" stroke="#64748b" stroke-width="2" fill="white" />
+  <text x="425" y="82" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="600">NodeIR</text>
+  <line x1="290" y1="90" x2="560" y2="90" stroke="#e2e8f0" stroke-width="1" />
+  <rect x="302" y="101" width="246" height="55" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1" />
+  <text x="314" y="120" font-size="10" fill="#b45309" font-weight="600">css</text>
+  <text x="314" y="140" font-size="9" fill="#b45309">padding / color / gap / ...</text>
+  <text x="537" y="120" font-size="8" fill="#b45309" text-anchor="end">← Script writes, AI read-only</text>
+  <rect x="302" y="168" width="246" height="91" rx="4" fill="#f3e8ff" stroke="#a855f7" stroke-width="1" />
+  <text x="314" y="188" font-size="10" fill="#6b21a8" font-weight="600">isComponentInstance</text>
+  <text x="314" y="208" font-size="10" fill="#6b21a8">isVectorNode</text>
+  <text x="314" y="228" font-size="10" fill="#6b21a8">isTextNode</text>
+  <text x="537" y="247" font-size="8" fill="#6b21a8" text-anchor="end">← AI decision signals</text>
+  <rect x="302" y="271" width="246" height="43" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" />
+  <text x="314" y="298" font-size="10" fill="#1e40af">textContent / figmaName</text>
+  <text x="537" y="307" font-size="8" fill="#1e40af" text-anchor="end">← Figma raw</text>
+  <rect x="302" y="326" width="246" height="43" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" />
+  <text x="314" y="353" font-size="10" fill="#64748b">children: [NodeIR]</text>
+  <text x="537" y="362" font-size="8" fill="#64748b" text-anchor="end">← recursive</text>
+  </g>
+  <path d="M606,213 L 686,213" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#ap)" />
+  <text x="646" y="204" font-size="9" fill="#6b21a8" text-anchor="middle">Read-only</text>
+  <g transform="translate(80 0)">
+  <rect x="620" y="61" width="236" height="324" rx="10" stroke="#a855f7" stroke-dasharray="6,4" stroke-width="1.5" fill="#faf5ff" />
+  <text x="634" y="79" font-size="11" fill="#6b21a8">AI Layer</text>
+  <rect x="637" y="95" width="202" height="38" rx="6" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff" />
+  <text x="738" y="118.0" font-size="11" fill="#6b21a8" text-anchor="middle">Code Connect Query</text>
+  <path d="M738,138 L 738,155" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)" />
+  <rect x="637" y="166" width="202" height="38" rx="6" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff" />
+  <text x="738" y="189.0" font-size="11" fill="#6b21a8" text-anchor="middle">Component Library Matching</text>
+  <path d="M738,209 L 738,226" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aw)" />
+  <rect x="637" y="237" width="202" height="38" rx="6" stroke="#a855f7" stroke-width="1.5" fill="#f3e8ff" />
+  <text x="738" y="260.0" font-size="11" fill="#6b21a8" text-anchor="middle">Semantic Naming</text>
+  <rect x="637" y="326" width="202" height="38" rx="6" stroke="#94a3b8" stroke-width="1" fill="#f1f5f9" />
+  <text x="738" y="344" font-size="10" fill="#64748b" text-anchor="middle">Never touches css field</text>
+  <text x="738" y="360" font-size="10" fill="#64748b" text-anchor="middle">Generates no CSS values</text>
+  </g>
+  <text x="480" y="420" font-size="10" fill="#64748b" text-anchor="middle">css is precisely extracted by script and frozen · isComponentInstance etc. are the only AI decision points</text>
 </svg>

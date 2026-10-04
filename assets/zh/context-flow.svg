@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 490 720" width="490" height="720" role="img" aria-labelledby="title desc">
+  <title id="title">Figma Context 按需查询流程</title>
+  <desc id="desc">从 figma-to-code URL 启动服务，通过渐进式 REST 查询生成代码，并经过视觉对比和评分校验。</desc>
+  <defs><style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }</style></defs>
+  <rect x="60" width="490" height="720" fill="#fff"/>
+
+  <rect x="125" y="28" width="360" height="47" rx="8" fill="#e6f0ff" stroke="#477dff" stroke-width="1.8"/>
+  <text x="305" y="57" text-anchor="middle" font-size="17" font-weight="600" fill="#1f4198">/figma-to-code URL --light</text>
+  <path d="M305 81 L305 94" fill="none" stroke="#477dff" stroke-width="1.8"/><path d="M299 93 L305 105 L311 93 Z" fill="#477dff"/>
+
+  <rect x="125" y="110" width="360" height="71" rx="8" fill="#f7f0ff" stroke="#8b4dff" stroke-width="2.3"/>
+  <text x="305" y="139" text-anchor="middle" font-size="17" font-weight="600" fill="#51238c">figma-context server :7181</text>
+  <text x="305" y="163" text-anchor="middle" font-size="14" fill="#51238c">启动时加载 Figma IR 到内存，暴露 REST API</text>
+  <path d="M305 187 L305 200" fill="none" stroke="#8b4dff" stroke-width="1.8"/><path d="M299 199 L305 211 L311 199 Z" fill="#8b4dff"/>
+
+  <rect x="85" y="216" width="440" height="236" rx="13" fill="#fbfcff" stroke="#8392ae" stroke-width="1.8" stroke-dasharray="8 5"/>
+  <text x="98" y="235" font-size="15" fill="#536278">Coding Agent 按需查询（渐进式上下文）</text>
+  <rect x="125" y="246" width="360" height="47" rx="8" fill="#fff8df" stroke="#e99a20" stroke-width="1.6"/>
+  <text x="305" y="275" text-anchor="middle" font-size="16" fill="#914b1f">GET /overview — 整棵节点目录</text>
+  <path d="M305 299 L305 302" fill="none" stroke="#e99a20" stroke-width="1.8"/><path d="M300 301 L305 313 L310 301 Z" fill="#e99a20"/>
+  <rect x="125" y="318" width="360" height="47" rx="8" fill="#fff8df" stroke="#e99a20" stroke-width="1.6"/>
+  <text x="305" y="347" text-anchor="middle" font-size="16" fill="#914b1f">GET /context/{nodeId} — 精确 CSS + 坐标</text>
+  <path d="M305 371 L305 374" fill="none" stroke="#e99a20" stroke-width="1.8"/><path d="M300 373 L305 385 L310 373 Z" fill="#e99a20"/>
+  <rect x="125" y="390" width="360" height="47" rx="8" fill="#fff8df" stroke="#e99a20" stroke-width="1.6"/>
+  <text x="305" y="419" text-anchor="middle" font-size="16" fill="#914b1f">GET /screenshot/{nodeId} — 渲染截图</text>
+  <path d="M305 458 L305 470" fill="none" stroke="#e99a20" stroke-width="1.8"/><path d="M299 469 L305 481 L311 469 Z" fill="#e99a20"/>
+
+  <rect x="125" y="488" width="360" height="47" rx="8" fill="#fff8df" stroke="#e99a20" stroke-width="1.6"/>
+  <text x="305" y="517" text-anchor="middle" font-size="16" fill="#914b1f">生成 TSX + CSS</text>
+  <path d="M305 541 L305 552" fill="none" stroke="#35ad52" stroke-width="1.8"/><path d="M299 551 L305 563 L311 551 Z" fill="#35ad52"/>
+
+  <rect x="125" y="570" width="360" height="47" rx="8" fill="#f7f0ff" stroke="#8b4dff" stroke-width="1.8"/>
+  <text x="305" y="599" text-anchor="middle" font-size="16" fill="#51238c">Chrome 视觉截图对比（≤ 3 轮）</text>
+  <path d="M305 623 L305 635" fill="none" stroke="#35ad52" stroke-width="1.8"/><path d="M299 634 L305 646 L311 634 Z" fill="#35ad52"/>
+
+  <rect x="125" y="653" width="360" height="47" rx="8" fill="#ddfbea" stroke="#35ad52" stroke-width="1.8"/>
+  <text x="305" y="682" text-anchor="middle" font-size="16" fill="#315d40">validate.py · 评分 ≥ 90 落地</text>
+</svg>

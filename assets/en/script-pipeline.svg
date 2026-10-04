@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 0 460 721" width="460" height="721" role="img" aria-labelledby="title desc">
+<title id="title">Script Pipeline Architecture</title>
+<desc id="desc">The entry point coordinates data extraction, IR construction, and code generation, with standalone scripts below.</desc>
+<style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }</style>
+<rect x="75" y="0" width="460" height="721" fill="#fff"/>
+<rect x="103" y="102" width="402" height="118" rx="12" fill="#fbfcff" stroke="#8392ae" stroke-width="1.6" stroke-dasharray="7 5"/>
+<rect x="103" y="349" width="402" height="119" rx="12" fill="#fbfcff" stroke="#8392ae" stroke-width="1.6" stroke-dasharray="7 5"/>
+<rect x="103" y="577" width="402" height="119" rx="12" fill="#fbfcff" stroke="#8392ae" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M304 75 C304 96 204 91 204 111" fill="none" stroke="#8b4dff" stroke-width="1.6"/><path d="M199 111 L204 122 L209 111 Z" fill="#8b4dff"/>
+<path d="M304 75 C304 96 405 91 405 111" fill="none" stroke="#8b4dff" stroke-width="1.6"/><path d="M400 111 L405 122 L410 111 Z" fill="#8b4dff"/>
+<path d="M204 180 C204 202 304 199 304 236" fill="none" stroke="#e69017" stroke-width="1.6"/><path d="M299 236 L304 247 L309 236 Z" fill="#e69017"/>
+<path d="M405 180 C405 202 304 199 304 236" fill="none" stroke="#e69017" stroke-width="1.6"/><path d="M299 236 L304 247 L309 236 Z" fill="#e69017"/>
+<path d="M304 322 L304 337 C304 355 204 352 204 359" fill="none" stroke="#477dff" stroke-width="1.6"/><path d="M199 359 L204 370 L209 359 Z" fill="#477dff"/>
+<path d="M304 322 L304 337 C304 355 405 352 405 359" fill="none" stroke="#477dff" stroke-width="1.6"/><path d="M400 359 L405 370 L410 359 Z" fill="#477dff"/>
+<path d="M204 433 C204 455 304 454 304 484" fill="none" stroke="#39ae55" stroke-width="1.6"/><path d="M299 484 L304 495 L309 484 Z" fill="#39ae55"/>
+<path d="M405 433 C405 455 304 454 304 484" fill="none" stroke="#39ae55" stroke-width="1.6"/><path d="M299 484 L304 495 L309 484 Z" fill="#39ae55"/>
+<path d="M304 549 L304 557 C304 579 204 575 204 615" fill="none" stroke="#64748b" stroke-width="1.6"/><path d="M199 615 L204 626 L209 615 Z" fill="#64748b"/>
+<path d="M304 549 L304 557 C304 579 405 575 405 615" fill="none" stroke="#64748b" stroke-width="1.6"/><path d="M400 615 L405 626 L410 615 Z" fill="#64748b"/>
+<rect x="139" y="26" width="331" height="43" rx="9" fill="#f7f2ff" stroke="#8b4dff" stroke-width="1.6"/>
+<text x="304.5" y="52" text-anchor="middle" font-size="14" fill="#51238c" font-weight="600">convert.py — Entry Point / Flow Control</text>
+<text x="113" y="119" text-anchor="start" font-size="13" fill="#536278">Data Layer</text>
+<rect x="122" y="129" width="165" height="43" rx="8" fill="#fff9e4" stroke="#e69017" stroke-width="1.3"/>
+<rect x="323" y="129" width="165" height="43" rx="8" fill="#fff9e4" stroke="#e69017" stroke-width="1.3"/>
+<text x="204.5" y="155" text-anchor="middle" font-size="14" fill="#8b431b">lib/extract.py</text>
+<text x="405.5" y="155" text-anchor="middle" font-size="14" fill="#8b431b">lib/figma_vars.py</text>
+<rect x="139" y="253" width="331" height="64" rx="8" fill="#e6f0ff" stroke="#477dff" stroke-width="2"/>
+<text x="304.5" y="279" text-anchor="middle" font-size="14" fill="#193e95" font-weight="600">lib/ir_builder.py — Core IR Builder</text>
+<text x="304.5" y="301" text-anchor="middle" font-size="12" fill="#193e95">css_extractor · layout_inference · node_classifier</text>
+<text x="113" y="366" text-anchor="start" font-size="13" fill="#536278">Code Layer</text>
+<rect x="122" y="377" width="165" height="43" rx="8" fill="#dcfbea" stroke="#39ae55" stroke-width="1.3"/>
+<rect x="323" y="377" width="165" height="43" rx="8" fill="#dcfbea" stroke="#39ae55" stroke-width="1.3"/>
+<text x="204.5" y="403" text-anchor="middle" font-size="14" fill="#3c4e4a">tsx_generator.py</text>
+<text x="405.5" y="403" text-anchor="middle" font-size="14" fill="#3c4e4a">scss_generator.py</text>
+<rect x="139" y="501" width="331" height="43" rx="8" fill="#fff9e4" stroke="#e69017" stroke-width="1.3"/>
+<text x="304.5" y="527" text-anchor="middle" font-size="13.5" fill="#8b431b">token_resolver · code_connect</text>
+<text x="113" y="594" text-anchor="start" font-size="11" fill="#536278">Standalone scripts</text>
+<text x="113" y="609" text-anchor="start" font-size="11" fill="#536278">(off main flow)</text>
+<rect x="122" y="633" width="165" height="43" rx="8" fill="#fff" stroke="#8392ae" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="323" y="633" width="165" height="43" rx="8" fill="#dcfbea" stroke="#39ae55" stroke-width="1.3"/>
+<text x="204.5" y="659" text-anchor="middle" font-size="13.5" fill="#3c4e62">split_components.py</text>
+<text x="405.5" y="659" text-anchor="middle" font-size="13.5" fill="#3c4e4a">validate.py · Score ≥ 90</text>
+</svg>

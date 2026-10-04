@@ -1,0 +1,104 @@
+assets/zh/validation-layers.svg
+  s_56b27107026f61::t_246c06aa8b5f4d 1-9,18,27,36-53
+  s_56b27107026f61::t_cfd245ee50c924 10-17,19-26,28-35
+assets/zh/arch-overview.svg
+  s_56b27107026f61::t_52f4a188a9abe2 1-42
+assets/en/script-pipeline.svg
+  s_56b27107026f61::t_b2cc2e7e4232ff 1,3-18,20,27,36-42
+  s_8c31fa8d73e788::t_62b429af325b6f 35
+  s_8c31fa8d73e788::t_93321f108bfd22 21,29
+  s_56b27107026f61::t_1bf8540aa786de 2,19,22-26,28,30-34
+assets/zh/evaluation-dimensions.svg
+  s_2e2d9f3844796e::t_31470fb7dd87fd 1-31
+  s_5b758e19a2cb2c::t_a714988a0d1843 32-33
+assets/en/validation-layers.svg
+  s_56b27107026f61::t_246c06aa8b5f4d 1-9,18,27,36-53
+  s_56b27107026f61::t_cfd245ee50c924 10-17,19-26,28-35
+assets/en/evaluation-dimensions.svg
+  s_2e2d9f3844796e::t_31470fb7dd87fd 1-31
+  s_5b758e19a2cb2c::t_a714988a0d1843 32-33
+assets/zh/script-pipeline.svg
+  s_56b27107026f61::t_1bf8540aa786de 2,19,22-26,28,30-34
+  s_8c31fa8d73e788::t_62b429af325b6f 35
+  s_56b27107026f61::t_b2cc2e7e4232ff 1,3-18,20-21,27,29,36-42
+assets/en/arch-overview.svg
+  s_56b27107026f61::t_52f4a188a9abe2 1-42
+assets/en/code-connect-flow.svg
+  s_56b27107026f61::t_2117e37a79b8d6 1,8-10,19-23,31-35,41
+  s_2e2d9f3844796e::t_d9c846765f1fb6 3-6,11-18,24-30,36-40
+assets/zh/context-flow.svg
+  s_8c31fa8d73e788::t_be287aaf4d386f 38
+  s_8c31fa8d73e788::t_4658183eb137cf 1-13,15-37
+  s_8c31fa8d73e788::t_afff58c1dd94ec 14
+assets/zh/code-connect-flow.svg
+  s_56b27107026f61::t_2117e37a79b8d6 1,8-10,19-23,31-35,41
+  s_2e2d9f3844796e::t_d9c846765f1fb6 3-6,11-18,24-30,36-40
+assets/en/version-evolution.svg
+  s_8c31fa8d73e788::t_c39050a4ae2b9d 2-9,11-12,15-17,25,41
+  s_56b27107026f61::t_a85cf3522c3c45 20,22-23
+  s_56b27107026f61::t_2532af41e7cf6b 18-19,21,24,27-28,30-31,33-40
+  s_56b27107026f61::t_ecf34c59ef2e34 1,10,13-14,26,29,32
+assets/zh/ir-contract.svg
+  s_2e2d9f3844796e::t_0b6bfc0dcd08a6 2-13,16-29,33-50,55-67
+  s_8c31fa8d73e788::t_62b429af325b6f 14,31,53
+  s_56b27107026f61::t_1ef6ddbc85ffc6 1,15,30,32,51-52,54,68-69
+assets/zh/dual-platform.svg
+  s_2e2d9f3844796e::t_09fe9a1e8f6262 1-45,47-60
+  s_5b758e19a2cb2c::t_62d3963f24a708 46
+assets/en/context-flow.svg
+  s_8c31fa8d73e788::t_afff58c1dd94ec 14,22
+  s_8c31fa8d73e788::t_be287aaf4d386f 38
+  s_8c31fa8d73e788::t_4658183eb137cf 1-13,15-21,23-37
+assets/en/dual-platform.svg
+  s_5b758e19a2cb2c::t_62d3963f24a708 46
+  s_2e2d9f3844796e::t_09fe9a1e8f6262 1-45,47-60
+assets/zh/version-evolution.svg
+  s_56b27107026f61::t_ecf34c59ef2e34 1,10,13-14,26,29,32
+  s_56b27107026f61::t_2532af41e7cf6b 18-19,21,24,27-28,30-31,33-40
+  s_8c31fa8d73e788::t_c39050a4ae2b9d 2-9,11-12,15-17,25,41
+  s_56b27107026f61::t_a85cf3522c3c45 20,22-23
+assets/en/ir-contract.svg
+  s_56b27107026f61::t_1ef6ddbc85ffc6 1,15,30,32,51-52,54,68-69
+  s_8c31fa8d73e788::t_62b429af325b6f 14,31,53
+  s_2e2d9f3844796e::t_0b6bfc0dcd08a6 2-13,16-29,33-50,55-67
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "e4e5a9e2d798cbce09c48a7aae580a336688f83d",
+  "prompts": {},
+  "sessions": {
+    "s_2e2d9f3844796e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0ffca-c0f9-7343-9aae-e17b0a2a4f03",
+        "model": "unknown"
+      },
+      "human_author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    },
+    "s_56b27107026f61": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0fff9-4498-71e3-b4df-9ccfcf4e54cc",
+        "model": "unknown"
+      },
+      "human_author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    },
+    "s_5b758e19a2cb2c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ffca-c0f9-7343-9aae-e17b0a2a4f03",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    },
+    "s_8c31fa8d73e788": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0fff9-4498-71e3-b4df-9ccfcf4e54cc",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    }
+  }
+}

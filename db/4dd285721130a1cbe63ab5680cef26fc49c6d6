@@ -1,0 +1,14 @@
+.gitignore
+  h_f6c90aa3383ea9 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "db4dd285721130a1cbe63ab5680cef26fc49c6d6",
+  "prompts": {},
+  "humans": {
+    "h_f6c90aa3383ea9": {
+      "author": "rawbin.zhang <rawbin.zhang@lunarax.io>"
+    }
+  }
+}
